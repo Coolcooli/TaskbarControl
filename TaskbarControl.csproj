@@ -1,0 +1,30 @@
+<Project ToolsVersion="Current" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition="'$(Configuration)' == ''">Release</Configuration>
+    <Platform Condition="'$(Platform)' == ''">AnyCPU</Platform>
+    <ProjectGuid>{D5C9B2F4-7A61-42A2-83E5-A32DB20FB181}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>TaskbarControl</RootNamespace>
+    <AssemblyName>TaskbarControl</AssemblyName>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
+    <Prefer32Bit>false</Prefer32Bit>
+    <AutoGenerateBindingRedirects>false</AutoGenerateBindingRedirects>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\$(Configuration)\</OutputPath>
+    <ApplicationIcon>TaskbarControl.ico</ApplicationIcon>
+    <ApplicationManifest>app.manifest</ApplicationManifest>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Apps.cs" />
+    <Compile Include="Taskbars.cs" />
+    <Compile Include="SettingsForm.cs" />
+    <None Include="TaskbarControl.ico" />
+    <None Include="app.manifest" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
